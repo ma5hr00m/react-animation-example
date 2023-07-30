@@ -1,0 +1,74 @@
+html, body {
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+
+    --display-size: 400px;
+}
+
+#root {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    min-width: 500px;
+    min-height: 500px;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 100%;
+    background-image: url(./background.png);
+    background-attachment: fixed;
+    background-position: center center;
+}
+
+.ripple-1 {
+    z-index: 2;
+    background-size: auto 106%;
+    animation: ripple-animation 1s forwards;
+}
+
+.ripple-2 {
+    z-index: 3;
+    background-size: auto 102%;
+    animation: ripple-animation 1s .2s forwards;
+}
+
+.ripple-3 {
+    z-index: 4;
+    background-size: auto 103%;
+    animation: ripple-animation 1s .4s forwards;
+}
+
+.ripple-4 {
+    z-index: 4;
+    background-size: auto 101%;
+    animation: ripple-animation 1s .5s forwards;
+}
+
+.ripple-5 {
+    z-index: 5;
+    background-size: auto 102%;
+    animation: ripple-animation 1s .8s forwards;
+}
+
+.ripple-6 {
+    z-index: 5;
+    background-size: auto 100%;
+    animation: ripple-animation 1s 1s forwards;
+}
+
+@keyframes ripple-animation {
+    0% {
+        width: 30px;
+        height: 30px;
+    }
+
+    100% {
+        width: var(--display-size);
+        height: var(--display-size);
+    }
+}
