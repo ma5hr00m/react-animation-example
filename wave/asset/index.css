@@ -1,0 +1,82 @@
+html, body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background: #66ccff;
+}
+
+h1 {
+    z-index: 2;
+    position: fixed;
+    left: 50%;
+    top: 100px;
+    font-size: 160px;
+    font-family: monospace;
+    color: #66ccff;
+    animation: wave-title 10s linear infinite;
+}
+
+@keyframes wave-title {
+    0% {
+        transform: translateX(-50%) translateY(0);
+    }
+    50% {
+        transform: translateX(-50%) translateY(-60px);
+    }
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+.wave {
+    position: fixed;
+    left: 50%;
+    top: -11500px;
+    width: 12000px;
+    height: 12000px;
+    background: #eee;
+    border-radius: 45%;
+}
+
+.wave-1 {
+    animation: wave-animation-1 25s linear infinite;
+    opacity: 0.5;
+}
+
+.wave-2 {
+    animation: wave-animation-2 25s linear infinite;
+    opacity: 0.5;
+}
+
+.wave-3 {
+    animation: wave-animation-3 25s linear infinite;
+    opacity: 0.5;
+}
+
+@keyframes wave-animation-1 {
+    0% {
+        transform: translateX(-50%) rotate(0deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(360deg);
+    }
+}
+
+@keyframes wave-animation-2 {
+    0% {
+        transform: translateX(-50%) rotate(45deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(405deg);
+    }
+}
+
+@keyframes wave-animation-3 {
+    0% {
+        transform: translateX(-50%) rotate(22deg);
+    }
+    100% {
+        transform: translateX(-50%) rotate(382deg);
+    }
+}
