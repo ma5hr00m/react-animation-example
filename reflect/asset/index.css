@@ -1,0 +1,57 @@
+html, body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    color: #444;
+    margin-bottom: 60px;
+}
+
+.reflection-box {
+    width: fit-content;
+    height: fit-content;
+}
+
+.reflection {
+    position: relative;
+    background: url(./display.jpg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 800px;
+    height: 450px;
+    margin-bottom: 200px;
+    box-shadow: 0px 40px 80px rgba(0,0,0,0.4);
+}
+
+.reflection::before {
+    z-index: 1;
+    content: "";
+    position: absolute;
+    background: inherit;
+    background-position: bottom;
+    width: inherit;
+    height: 50%;
+    bottom: -51%;
+    transform: scaleY(-1);
+    opacity: 0.8;
+}
+
+.reflection::after {
+    z-index: 2;
+    content: "";
+    background: linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0.2));
+    position: absolute;
+    background-position: bottom;
+    width: inherit;
+    height: 50%;
+    bottom: -51%;
+    transform: scaleY(-1);
+}
