@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+@keyframes shapeChange {
+  0% {
+    clip-path: circle(50% at 50% 50%);
+  }
+  50% {
+    clip-path: polygon(50% 0%, 90% 20%, 90% 80%, 50% 100%, 10% 80%, 10% 20%);
+  }
+  100% {
+    clip-path: circle(50% at 50% 50%);
+  }
+}
+
+.yourElement {
+  animation: shapeChange 2s infinite;
+}
+</style>
+</head>
+<body>
+
+<div class="yourElement" style="background-color:blue;height:200px;width:200px;"></div>
+
+</body>
+</html>
