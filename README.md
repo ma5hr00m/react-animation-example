@@ -1,3 +1,3 @@
-# CSS-toys
+# react-animation-examples
 
-CSS 是一门有趣的标记语言。
+提供在React中使用动画的有趣案例。
